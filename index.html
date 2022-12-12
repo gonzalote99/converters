@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#cdd4df">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🔳</text></svg>">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="styles.css" />
+  <title>converters</title>
+</head>
+<body>
+  <div id="loadingDiv">
+    <div class="loader">
+        
+    </div>
+
+  </div>
+  <div class="container d-flex flex-column align-items-center justify-content-center">
+    <div class="d-flex flex-column converter text-center">
+      <h1 class="mb-3 fw-bold">weight converter</h1>
+      <p>
+       enter value
+      </p>
+      <label for="inputPounds" class="mb-1 mt-1 ">pounds:</label>
+      <input 
+       class="m-auto"
+       type="number"
+       id="inputPounds"
+       placeholder="Pounds"
+       oninput="poundConverter(this.value)"
+      />
+
+      <label for="inputKilograms" class="mb-1 mt-1 ">kilograms:</label>
+      <input 
+       class="m-auto"
+       type="number"
+       id="inputKilograms"
+       placeholder="Kilograms"
+       oninput="kilogramConverter(this.value)"
+      />
+      
+      <label for="inputGrams" class="mb-1 mt-1 ">grams:</label>
+      <input 
+       class="m-auto"
+       type="number"
+       id="inputGrams"
+       placeholder="Grams"
+       oninput="gramConverter(this.value)"
+      />
+      
+      <label for="inputOunces" class="mb-1 mt-1 ">ounces:</label>
+      <input 
+       class="m-auto"
+       type="number"
+       id="inputOunces"
+       placeholder="Ounces"
+       oninput="ounceConverter(this.value)"
+      />
+
+
+      <label for="inputStones" class="mb-1 mt-1 ">stones:</label>
+      <input 
+       class="m-auto"
+       type="number"
+       id="inputStones"
+       placeholder="Stones"
+       oninput="stoneConverter(this.value)"
+      />
+
+
+
+    </div>
+   <div class="d-flex flex-column converter text-center">
+     <h1 class="mb-3 fw-bold ">temperature converter</h1>
+     <p>
+      enter value
+     </p>
+     <label for="inputFahrenheit" class="mb-1 mt-1">fahrenheit:</label>
+     <input 
+     class="m-auto"
+     type="number"
+     id="inputFahrenheit" 
+     placeholder="Fahrenheit"
+     oninput="fahrenheitConverter(this.value)"
+
+     />
+
+     <label for="inputCelsius" class="mb-1 mt-1">celsius:</label>
+     <input 
+     class="m-auto"
+     type="number"
+     id="inputCelsius" 
+     placeholder="Celsius"
+     oninput="celsiusConverter(this.value)"
+
+     />
+
+
+     <label for="inputKelvin" class="mb-1 mt-1">kelvin:</label>
+     <input 
+     class="m-auto"
+     type="number"
+     id="inputKelvin" 
+     placeholder="Kelvin"
+     oninput="kelvinConverter(this.value)"
+
+     />
+
+
+   </div>
+
+   <div class="d-flex flex-column converter text-center">
+     <h1 class="mb-3 fw-bold ">length converter</h1>
+     <p>
+        enter value 
+  
+     </p>
+
+     <label for="inputFeet" class="mb-1 mt-1">feet:</label>
+     <input 
+      class="m-auto"
+      type="number"
+      id="inputFeet"
+      placeholder="Feet"
+      oninput="feetConverter(this.value)"
+ 
+     />
+    
+     <label for="inputMeters" class="mb-1 mt-1">Meters:</label>
+     <input 
+      class="m-auto"
+      type="number"
+      id="inputMeters"
+      placeholder="Meters"
+      oninput="metersConverter(this.value)"
+ 
+     />
+
+     <label for="inputInches" class="mb-1 mt-1">inches:</label>
+     <input 
+      class="m-auto"
+      type="number"
+      id="inputInches"
+      placeholder="Inches"
+      oninput="inchesConverter(this.value)"
+ 
+     />
+       
+     <label for="inputCm" class="mb-1 mt-1">cm:</label>
+     <input 
+      class="m-auto"
+      type="number"
+      id="inputCm"
+      placeholder="cm"
+      oninput="cmConverter(this.value)"
+ 
+     />
+
+     <label for="inputYards" class="mb-1 mt-1">Yards:</label>
+     <input 
+      class="m-auto"
+      type="number"
+      id="inputYards"
+      placeholder="Yards"
+      oninput="yardsConverter(this.value)"
+ 
+     />
+
+     <label for="inputKilometers" class="mb-1 mt-1">Kilometers:</label>
+     <input 
+      class="m-auto"
+      type="number"
+      id="inputKilometers"
+      placeholder="Kilometers"
+      oninput="kilometersConverter(this.value)"
+ 
+     />
+
+     <label for="inputMiles" class="mb-1 mt-1">Miles:</label>
+     <input 
+      class="m-auto"
+      type="number"
+      id="inputMiles"
+      placeholder="Miles"
+      oninput="milesConverter(this.value)"
+ 
+     />
+
+
+
+   </div>
+
+   
+
+      <div class="d-flex flex-column converter text-center">
+        <h1 class="mb-3 fw-bold">Speed Converter</h1>
+        <p>
+          enter value
+        </p>
+        <label for="inputMPH" class="mb-1 mt-1">MPH:</label>
+        <input
+          class="m-auto"
+          type="number"
+          id="inputMPH"
+          placeholder="MPH"
+          oninput="MPHConverter(this.value)"
+        />
+
+        <label for="inputKPH" class="my-1 mt-3">KPH:</label>
+        <input
+          class="m-auto"
+          type="number"
+          id="inputKPH"
+          placeholder="KPH"
+          oninput="KPHConverter(this.value)"
+        />
+
+        <label for="inputKnots" class="my-1 mt-3">Knots:</label>
+        <input
+          class="m-auto"
+          type="number"
+          id="inputKnots"
+          placeholder="Knots"
+          oninput="knotsConverter(this.value)"
+        />
+
+        <label for="inputMach" class="my-1 mt-3">Mach:</label>
+        <input
+          class="m-auto"
+          type="number"
+          id="inputMach"
+          placeholder="Mach"
+          oninput="machConverter(this.value)"
+        />
+
+
+
+
+
+   </div>
+
+   <footer>
+      <p class="mb-0 px-1 pb-1">
+        code by
+        <a href="https://github.com/gonzalote99"
+          target="blank"
+          class="link-light text-decoration-none footer-link">
+
+      me</a>
+      </p>
+      
+ 
+
+   </footer>
+
+
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
